@@ -24,7 +24,7 @@ pipeline {
         }
         stage ('docker remove service') {
             steps {
-                sh '/usr/bin/docker service update --image pravin1015/labexam --force labexam'
+                sh '/usr/bin/docker service rm labexam'
             }
         }
         stage ('docker create service') {
