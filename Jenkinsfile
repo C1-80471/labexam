@@ -29,7 +29,7 @@ pipeline {
         }
         stage ('docker create service') {
             steps {
-                sh '/usr/bin/docker service create --name myservice -p 9876:80 --replicas 5 pravin1015/labexam'
+                sh '/usr/bin/docker service create --name labexam -p 9876:80 --replicas 5 pravin1015/labexam'
             }
         }
     }
